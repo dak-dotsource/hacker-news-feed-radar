@@ -24,7 +24,18 @@ export default function Main({ page }) {
       <h1>Newsfeed</h1>
       <ul>
         {data ? (
-          data.map((d) => <li key={d.id}>{d.title}</li>)
+          data.map((d) => (
+            <li key={d.id} className="border-b-1">
+              <h2>{d.title}</h2>
+              <p>{d.points} Points</p>
+              <p>User: {d.user}</p>
+              <p>Time: {new Date(d.time * 1000).toLocaleString("de-DE")}</p>
+              <p>{d.time_ago}</p>
+              <a href={`${d.url}`} target="blank">
+                {d.url}
+              </a>
+            </li>
+          ))
         ) : (
           <p>Loading...</p>
         )}
