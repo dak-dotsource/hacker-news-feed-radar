@@ -6,7 +6,7 @@ export default function Footer({ switchPageUp, switchPageDown, page }) {
       <button
         onClick={switchPageDown}
         disabled={page === 1}
-        className="cursor-pointer"
+        className="cursor-pointer disabled:cursor-not-allowed"
       >
         ◀️
       </button>
@@ -14,7 +14,7 @@ export default function Footer({ switchPageUp, switchPageDown, page }) {
       <button
         onClick={switchPageUp}
         disabled={page === 10}
-        className="cursor-pointer"
+        className="cursor-pointer disabled:cursor-not-allowed"
       >
         ▶️
       </button>
