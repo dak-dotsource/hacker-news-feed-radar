@@ -10,7 +10,7 @@ export default function Footer({ switchPageUp, switchPageDown, page }) {
       >
         ◀️
       </button>
-      <h4>{page}</h4>
+      <h4 className="text-amber-300">{page}</h4>
       <button
         onClick={switchPageUp}
         disabled={page === 10}

@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   return (
-    <div className="container flex flex-col min-w-full min-h-screen mx-auto bg-emerald-600">
+    <div className="container flex flex-col min-w-full min-h-screen mx-auto bg-gradient-to-r from-blue-800 to-indigo-900">
       <Header />
       <Main page={page} />
       <Footer
