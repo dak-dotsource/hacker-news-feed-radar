@@ -60,13 +60,14 @@ export default function Main({ page }) {
       {/* button to fetch wrong data */}
       <button
         onClick={fetchWrongData}
-        className="bg-white px-4 py-2 rounded-md text-red-500 border-1 border-red-500 hover:bg-red-500 hover:text-white cursor-pointer font-bold self-end transition duration-300"
+        /*  className="bg-white px-4 py-2 rounded-md text-red-500 border-1 border-red-500 hover:bg-red-500 hover:text-white cursor-pointer font-bold self-end transition duration-300" */
+        className="btn btn-error text-neutral-content self-end "
       >
         get error
       </button>
 
       {/* show legend for different colors */}
-      <div className="my-4 w-full flex justify-center">
+      <div className="my-4 w-full flex justify-center text-gray-700">
         <span className="rounded-md text-sm italic mr-2 bg-indigo-200 px-4 py-2">
           link
         </span>
@@ -127,9 +128,9 @@ export default function Main({ page }) {
                   : "bg-lime-300"
               }`}
             >
-              <h2 className="font-bold">
+              <h2 className="font-bold text-gray-700">
                 {d.title}{" "}
-                <span className="font-normal text-sm">({d.time_ago})</span>
+                <span className="font-normal  text-sm">({d.time_ago})</span>
               </h2>
               <p className="italic text-sm text-gray-700">
                 from {d.user} |{" "}
