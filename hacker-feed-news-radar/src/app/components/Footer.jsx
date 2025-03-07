@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer({ switchPageUp, switchPageDown, page }) {
   return (
-    <footer className="-bottom-0 flex justify-center ">
+    <footer className="-bottom-0 flex justify-center text-2xl p-10 gap-3 ">
       <button onClick={switchPageDown} disabled={page === 1}>
         ◀️
       </button>
