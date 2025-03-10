@@ -139,14 +139,24 @@ export default function Main({ page }) {
               </p>
 
               {d.type !== "ask" && (
-                <a
-                  href={`${d.url}`}
-                  target="_blank"
-                  title={d.url}
-                  className="rounded-md inline-block bg-indigo-600 text-amber-300   hover:bg-indigo-500 hover:italic transition duration-300 px-2 py-1 text-sm my-1"
-                >
-                  view in a new tab
-                </a>
+                <>
+                  <a
+                    href={`${d.url}`}
+                    target="_blank"
+                    title={d.url}
+                    className="rounded-md mr-5 inline-block bg-indigo-600 text-amber-300   hover:bg-indigo-500 hover:italic transition duration-300 px-2 py-1 text-sm my-1"
+                  >
+                    view post
+                  </a>
+                  <a
+                    href={`${d.url}`}
+                    target="_blank"
+                    title={d.domain}
+                    className="rounded-md inline-block bg-indigo-600 text-amber-300   hover:bg-indigo-500 hover:italic transition duration-300 px-2 py-1 text-sm my-1"
+                  >
+                    visit domain
+                  </a>
+                </>
               )}
               <p className="text-sm italic text-gray-700">
                 {d.comments_count} comments
