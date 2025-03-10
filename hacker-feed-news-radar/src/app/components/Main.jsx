@@ -16,6 +16,8 @@ export default function Main({ page }) {
       if (Array.isArray(response.data)) {
         setData(response.data);
         setError(null);
+      } else {
+        throw new Error();
       }
     } catch (error) {
       setError("Something went wrong! Please try again later!");
@@ -35,8 +37,7 @@ export default function Main({ page }) {
         setData(response.data);
         setError(null);
       } else {
-        setError("Something went wrong! Please try again later!");
-        setData([]);
+        throw new Error();
       }
     } catch (error) {
       setError("Something went wrong! Please try again later!");
